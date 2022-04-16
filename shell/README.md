@@ -31,8 +31,8 @@ Go to [Powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-p
 ### Set Git
 
 ```shell
-git config --global user.name "name"
-git config --global user.email "email"
+git config --global user.name "ruiyan-ma"
+git config --global user.email "maruiyan17@gmail.com"
 gh auth login
 ```
 
