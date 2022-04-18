@@ -32,15 +32,13 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
-nmap <F3> :NERDTreeToggle<CR>
-let g:NERDTreeWinPos = "right"
+nmap <F2> :NERDTreeToggle<CR>
 " exit vim if NERDTree is the only window remaining in the only tab
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
             \ 'b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
 Plug 'preservim/tagbar'
-nmap <F2> :TagbarToggle<CR>
-let g:tagbar_left=1
+nmap <F3> :TagbarToggle<CR>
 
 set rtp+=/opt/homebrew/opt/fzf
 Plug 'junegunn/fzf.vim'
