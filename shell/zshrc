@@ -127,7 +127,6 @@ alias t3="tree -L 3"
 # use trash to replace rm
 alias rm=trash
 
-
 # Export path for mysql
 export PATH=${PATH}:/usr/local/mysql/bin/
 # Export path for homebrew
