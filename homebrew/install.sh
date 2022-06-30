@@ -8,7 +8,7 @@ brew update
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
 brew install git vim java python fd tldr bat
-brew install autojump rg nnn ranger tmux neovim
+brew install autojump rg nnn ranger tmux
 brew install shellcheck gh cowsay trash node tree
 
 # curl
