@@ -8,3 +8,6 @@ cp ~/.zshrc shell/zshrc
 
 # update tmux.conf
 cp ~/.tmux.conf shell/tmux.conf
+
+# update ranger
+cp ~/.config/ranger/rc.conf ranger/rc.conf
