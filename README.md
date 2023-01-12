@@ -11,3 +11,5 @@ shell
 python
 
 formatter: used by vim-autoformat plugin
+
+ranger (~/.config/ranger)
