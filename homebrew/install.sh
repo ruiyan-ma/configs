@@ -7,9 +7,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 brew update
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
-brew install git vim java python fd tldr bat
-brew install autojump rg nnn ranger tmux
-brew install shellcheck gh cowsay trash node tree
+brew install git vim java python fd bat
+brew install autojump rg ranger tmux
+brew install shellcheck gh trash-cli node tree
 
 # curl
 brew install curl
@@ -27,9 +27,6 @@ echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zs
 
 # universal-ctags for vim tagbar plugin
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-
-# gtop and htop
-brew install gtop htop
 
 # maven and gradle
 brew install maven gradle
