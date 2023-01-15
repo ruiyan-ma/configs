@@ -1,21 +1,32 @@
-## vim-plug.sh
+# vim-plug
 
-Install vim-plug manager for vim and neovim
+```shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
-## vimrc
+# vimrc
 
-The back up of ~/.vimrc
+The back up of ~/.vimrc. 
 
 Use Vim-Plug to manage all plugins.
 
-## ideavimrc
+# Ideavimrc
 
 The backup of ~/.ideavimrc
 
-## init.vim
+# cocnvim
 
-The back up of ~/.config/nvim/init.vim, for neovim.
+``` shell
+CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-html coc-xml coc-vimlsp coc-tsserver coc-sql coc-sh coc-pyright coc-pydocstring coc-json coc-java coc-css
+```
 
-## cocnvim.txt
+## Ale & cocnvim
 
-All plugins installed in coc.nvim
+Add the following code to your coc configuration file:
+
+Typing `:CocConfig` in vim to open coc configuration file.
+
+```json
+{"diagnostic.displayByAle": true}
+```

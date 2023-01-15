@@ -1,5 +1,4 @@
-# install homebrew and all other tools
-
+# install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -20,10 +19,6 @@ export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 # fzf
 brew install fzf
 /opt/homebrew/opt/fzf/install
-
-# powerlevel10k
-brew install romkatv/powerlevel10k/powerlevel10k
-echo "source $(brew --prefix)/opt/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 
 # universal-ctags for vim tagbar plugin
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
