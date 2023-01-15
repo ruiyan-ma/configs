@@ -162,9 +162,6 @@ set smartindent
 set shiftwidth=4
 set softtabstop=4
 
-" key binding
-" nmap q : :q<CR>
-
 " no annoying sound on errors
 set noerrorbells
 set novisualbell
