@@ -7,7 +7,6 @@ call plug#begin()
 "   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
 
 " color themes
-Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'tpope/vim-commentary'
@@ -22,8 +21,6 @@ au BufWrite * :Autoformat
 let g:autoformat_autoindent = 0
 let g:autoformat_retab = 0
 let g:autoformat_remove_trailing_spaces = 0
-
-Plug 'tpope/vim-surround'
 
 Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons'
@@ -119,7 +116,6 @@ set scrolloff=6
 set t_Co=256
 set cursorline
 set background=dark
-" colorscheme dracula
 colorscheme onehalfdark
 
 " set color for completion popups
