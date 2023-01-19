@@ -28,8 +28,3 @@ brew install maven gradle
 
 # count lines of code
 brew install cloc
-
-# compiler and debugger for cpp
-# MacOS has gcc
-# brew install gcc
-brew install cgdb
