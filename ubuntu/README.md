@@ -13,7 +13,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
-sudo apt install gcc valgrind ranger autojump trash-cli tree bat
+sudo apt install gcc g++ valgrind ranger autojump trash-cli tree bat
 ```
 
 ## zshrc
