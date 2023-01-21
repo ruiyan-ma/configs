@@ -1,6 +1,5 @@
 #!/bin/bash
 sudo apt update && sudo apt upgrade -y
-sudo snap refresh
 
 # shell
 sudo apt install zsh git curl
