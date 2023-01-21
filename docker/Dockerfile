@@ -10,7 +10,7 @@ RUN apt install -y zsh git vim curl \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \ 
     && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \ 
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \ 
-    && apt install -y gcc g++ valgrind ranger autojump trash-cli tree bat
+    && apt install -y gcc g++ cgdb valgrind ranger autojump trash-cli tree bat
 
 # copy config files
 RUN git clone https://github.com/ruiyan-ma/configs.git \ 
