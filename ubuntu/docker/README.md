@@ -18,3 +18,12 @@ curl -sL install-node.vercel.app/lts | bash
 npm install -g js-beautify
 ```
 
+## Ale & cocnvim
+
+Add the following code to your coc configuration file:
+
+Typing `:CocConfig` in vim to open coc configuration file.
+
+```
+{"diagnostic.displayByAle": true}
+```
