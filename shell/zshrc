@@ -128,8 +128,8 @@ alias t3="tree -L 3"
 alias rm=trash
 # exit ranger but stay in the current directory
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
-# alias for multipass
-alias ubuntu="multipass shell"
+# alias for docker container
+alias ubuntu="docker exec -it ubuntu /bin/zsh"
 
 # Export path for mysql
 export PATH=${PATH}:/usr/local/mysql/bin/
