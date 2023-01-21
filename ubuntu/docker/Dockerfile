@@ -12,7 +12,7 @@ RUN apt install -y zsh git vim curl \
     && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \ 
     && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \ 
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \ 
-    && apt install -y gcc g++ gdb cgdb valgrind ranger autojump trash-cli tree bat
+    && apt install -y gcc g++ gdb cgdb valgrind python3 python3-pip ranger autojump trash-cli tree bat
 
 # vim
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
@@ -30,3 +30,9 @@ RUN git clone https://github.com/ruiyan-ma/configs.git \
     && cp configs/ubuntu/vimrc ~/.vimrc \
     && cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf \
     && rm -rf configs
+
+# formatter
+RUN apt install astyle tidy \ 
+    && npm install -g js-beautify \ 
+    && pip3 install --upgrade autopep8 \
+    && pip3 install sqlparse

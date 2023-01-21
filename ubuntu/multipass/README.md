@@ -40,12 +40,12 @@ Install other things.
 # shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-sudo apt install -y gcc g++ gdb cgdb valgrind ranger autojump trash-cli tree bat
+apt install -y gcc g++ gdb cgdb valgrind python3 python3-pip ranger autojump trash-cli tree bat
 
 # vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    
+
 # nodejs
 curl -sL install-node.vercel.app/lts | bash
 
@@ -58,5 +58,11 @@ cp configs/ubuntu/zshrc ~/.zshrc
 cp configs/ubuntu/vimrc ~/.vimrc
 cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs
+
+# formatter
+apt install astyle tidy
+npm install -g js-beautify
+pip3 install --upgrade autopep8
+pip3 install sqlparse
 ```
 
