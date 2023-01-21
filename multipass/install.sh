@@ -8,16 +8,17 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 sudo apt install -y gcc g++ gdb cgdb valgrind ranger autojump trash-cli tree bat
 
-# vim
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# ranger
-git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
-
+# copy files
 git clone https://github.com/ruiyan-ma/configs.git
 cp configs/multipass/zshrc ~/.zshrc
 cp configs/multipass/vimrc ~/.vimrc
 mkdir -p ~/.config/ranger
 cp configs/multipass/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs
+
+# vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# ranger
+git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
