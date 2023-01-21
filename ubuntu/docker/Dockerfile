@@ -18,9 +18,6 @@ RUN apt install -y zsh git vim curl \
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# nodejs
-RUN curl -sL install-node.vercel.app/lts | bash
-
 # ranger
 RUN git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
@@ -32,7 +29,6 @@ RUN git clone https://github.com/ruiyan-ma/configs.git \
     && rm -rf configs
 
 # formatter
-RUN apt install astyle tidy \ 
-    && npm install -g js-beautify \ 
+RUN apt install -y astyle tidy \ 
     && pip3 install --upgrade autopep8 \
     && pip3 install sqlparse
