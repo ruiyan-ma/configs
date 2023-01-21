@@ -18,5 +18,6 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 git clone https://github.com/ruiyan-ma/configs.git
 cp configs/multipass/zshrc ~/.zshrc
 cp configs/multipass/vimrc ~/.vimrc
+mkdir -p ~/.config/ranger
 cp configs/multipass/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs

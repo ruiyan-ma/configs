@@ -18,6 +18,7 @@ RUN apt install -y zsh git vim curl \
 RUN git clone https://github.com/ruiyan-ma/configs.git \ 
     && cp configs/docker/zshrc ~/.zshrc \ 
     && cp configs/docker/vimrc ~/.vimrc \ 
+    && mkdir -p ~/.config/ranger \
     && cp configs/docker/rc.conf ~/.config/ranger/rc.conf \ 
     && rm -rf configs
 
