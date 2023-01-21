@@ -16,7 +16,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
 git clone https://github.com/ruiyan-ma/configs.git
-cp configs/ubuntu/zshrc ~/.zshrc
-cp configs/ubuntu/vimrc ~/.vimrc
-cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf
+cp configs/multipass/zshrc ~/.zshrc
+cp configs/multipass/vimrc ~/.vimrc
+cp configs/multipass/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs

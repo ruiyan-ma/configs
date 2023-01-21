@@ -1,0 +1,108 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vim-Plug Manager
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin()
+" The default plugin directory will be as follows:
+"   - Vim (Linux/macOS): '~/.vim/plugged'
+"   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
+
+" color themes
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
+
+Plug 'tpope/vim-commentary'
+
+Plug 'jiangmiao/auto-pairs'
+
+Plug '907th/vim-auto-save'
+let g:auto_save=1
+
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+nmap <F2> :NERDTreeToggle<CR>
+" exit vim if NERDTree is the only window remaining in the only tab
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
+            \ 'b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" ---------- airline ----------
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_powerline_fonts = 1
+
+" color themes
+let g:airline_theme='powerlineish'
+
+" tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'default'
+
+" Manage buffer tab
+nmap <C-H> :bp<CR>
+nmap <C-L> :bn<CR>
+" ---------- airline ----------
+
+" Initialize plugin system
+call plug#end()
+
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => General Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" use vim mode
+set nocompatible
+
+"basic
+syntax on
+set number
+set relativenumber
+set mouse+=a
+set clipboard=unnamed
+set backspace=indent,eol,start
+set encoding=utf8
+set scrolloff=6
+
+" set color theme
+set t_Co=256
+set cursorline
+set background=dark
+colorscheme onehalfdark
+
+" Cursor settings:
+"  1 -> blinking block
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+let &t_EI.="\e[2 q" "EI = NORMAL mode
+let &t_SI.="\e[6 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+
+" search
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+" set tab and indent
+set tabstop=4  " each tab is 4 spaces
+set expandtab  " use spaces instead of tabs
+set autoindent
+set smartindent
+set shiftwidth=4
+set softtabstop=4
+
+" no annoying sound on errors
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+" return to last edit position when opening files
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+au Filetype python set textwidth=79
+au Filetype python set fileformat=unix
+
+au Filetype java set textwidth=79
+au Filetype java set fileformat=unix
