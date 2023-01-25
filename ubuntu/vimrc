@@ -7,7 +7,7 @@ call plug#begin()
 "   - Neovim (Linux/macOS/Windows): stdpath('data') . '/plugged'
 
 " color themes
-" Plug 'sonph/onehalf', {'rtp': 'vim/'}
+Plug 'sonph/onehalf', {'rtp': 'vim/'}
 
 Plug 'tpope/vim-commentary'
 
@@ -103,9 +103,9 @@ set scrolloff=6
 
 " set color theme
 set t_Co=256
-" set cursorline
+set cursorline
 set background=dark
-" colorscheme onehalfdark
+colorscheme onehalfdark
 
 " set color for completion popups
 " rider theme
