@@ -8,11 +8,15 @@ RUN apt clean
 RUN apt update && apt upgrade -y
 
 # shell
-RUN apt install -y zsh git vim curl \
-    && sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" \ 
-    && git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \ 
-    && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting \ 
-    && apt install -y gcc g++ gdb cgdb valgrind python3 python3-pip ranger autojump trash-cli tree bat
+RUN apt install -y zsh git vim curl \ 
+    && apt install -y build-essential gdb cgdb valgrind \ 
+    && apt install -y python3 python3-pip \ 
+    && apt install -y ranger autojump trash-cli tree bat
+
+RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \ 
+    && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
 # vim
 RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

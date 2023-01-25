@@ -4,13 +4,13 @@ Set up ubuntu container using docker.
 
 ```shell
 docker build -t ubuntu:basic .
-docker run -itd --mount type=bind,src="/Users/ruiyan",target=/root/Home --name ubuntu ubuntu:basic
+docker run -itd -v /Users/ruiyan:/root/home --name ubuntu ubuntu:basic
 docker exec -it ubuntu /bin/zsh
 ```
 
-In ubuntu container, run the following: 
+In ubuntu container, run the following:
 
-```shell
+```
 # nodejs
 curl -sL install-node.vercel.app/lts | bash
 
@@ -27,3 +27,12 @@ Typing `:CocConfig` in vim to open coc configuration file.
 ```
 {"diagnostic.displayByAle": true}
 ```
+
+## Zshrc
+
+Add the following to `.zshrc` : 
+
+```shell
+alias ubuntu="docker exec -it ubuntu /bin/zsh"
+```
+

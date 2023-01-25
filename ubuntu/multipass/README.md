@@ -29,6 +29,10 @@ Install zsh.
 
 ```shell
 sudo apt install -y zsh git vim curl
+sudo apt install -y build-essential gdb cgdb valgrind
+sudo apt install -y python3 python3-pip
+sudo apt install -y ranger autojump trash-cli tree bat
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
@@ -38,7 +42,6 @@ Install other things.
 # shell
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-sudo apt install -y gcc g++ gdb cgdb valgrind python3 python3-pip ranger autojump trash-cli tree bat
 
 # vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
