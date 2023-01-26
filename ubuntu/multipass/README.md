@@ -5,7 +5,7 @@ Set up ubuntu in multipass container.
 Launch ubuntu virtual machine and open the shell. 
 
 ```shell
-multipass launch lts --name primary --cpus 2 --disk 10G --mem 4G
+multipass launch lts --name primary --cpus 2 --disk 10G --memory 4G
 multipass shell
 ```
 
@@ -67,10 +67,10 @@ pip3 install --upgrade autopep8
 pip3 install sqlparse
 ```
 
-# cocnvim
+## cocnvim
 
-```
-CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-html coc-xml coc-vimlsp coc-tsserver coc-sql coc-sh coc-pyright coc-pydocstring coc-json coc-java coc-css coc-clangd
+```shell
+CocInstall coc-word coc-snippets coc-marketplace coc-lightbulb coc-pyright coc-pydocstring coc-clangd
 ```
 
 ## CocConfig
