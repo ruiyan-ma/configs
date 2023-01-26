@@ -29,7 +29,7 @@ Install zsh.
 
 ```shell
 sudo apt install -y zsh git vim curl
-sudo apt install -y build-essential gdb cgdb valgrind
+sudo apt install -y build-essential gdb cgdb valgrind clangd
 sudo apt install -y python3 python3-pip
 sudo apt install -y ranger autojump trash-cli tree bat
 
