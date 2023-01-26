@@ -28,3 +28,6 @@ brew install maven gradle
 
 # count lines of code
 brew install cloc
+
+# multipass ubuntu virtual machine
+brew install multipass

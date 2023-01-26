@@ -38,4 +38,3 @@ Typing `:CocConfig` in vim to open coc configuration file.
     "diagnostic.checkCurrentLine": true
 }
 ```
-
