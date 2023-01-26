@@ -7,14 +7,16 @@ ENV LANG C.UTF-8
 RUN apt clean
 RUN apt update && apt upgrade -y
 
-# shell
+# apt install
 RUN apt install -y zsh git vim curl \ 
     && apt install -y build-essential gdb cgdb valgrind \ 
     && apt install -y python3 python3-pip \ 
     && apt install -y ranger autojump trash-cli tree bat
 
+# oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# auto-suggestion & highlighting
 RUN git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions \ 
     && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 

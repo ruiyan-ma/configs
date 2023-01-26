@@ -70,7 +70,7 @@ pip3 install sqlparse
 # cocnvim
 
 ```
-CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-html coc-xml coc-vimlsp coc-tsserver coc-sql coc-sh coc-pyright coc-pydocstring coc-json coc-java coc-css
+CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-html coc-xml coc-vimlsp coc-tsserver coc-sql coc-sh coc-pyright coc-pydocstring coc-json coc-java coc-css coc-clangd
 ```
 
 ## Ale & cocnvim

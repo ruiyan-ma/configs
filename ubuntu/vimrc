@@ -29,7 +29,7 @@ nmap <F2> :NERDTreeToggle<CR>
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
             \ 'b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'honza/vim-snippets'
 
@@ -54,30 +54,30 @@ nmap <C-L> :bn<CR>
 " ---------- airline ----------
 
 " ---------- ale ----------
-" set for coc.nvim
-let g:ale_disable_lsp = 1
 Plug 'dense-analysis/ale'
 
-" use preview windows for diagnostic information
-let g:ale_cursor_detail = 1
-let g:ale_floating_preview = 1
-let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰']
+" set for coc.nvim
+let g:ale_disable_lsp = 1
 
-" navigate between errors quickly
+" use preview windows to show diagnostic message
+let g:ale_cursor_detail = 1
+" close preview window when entering Insert mode
+let g:ale_close_preview_on_insert = 1
+" use a floating window for preview window
+let g:ale_floating_preview = 1
+" set the border of the floaing window
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
+
+" do not display problems using virtual text
+let g:ale_virtualtext_cursor = 0
+
+" " navigate between errors quickly
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
-" error and warning signs
+" " error and warning signs
 let g:ale_sign_error = '✗'
 let g:ale_sign_warning = ' '
-
-" set for airline
-let g:airline#extensions#ale#enabled = 1
-let airline#extensions#ale#error_symbol = '✗ '
-let airline#extensions#ale#warning_symbol = ' '
-let airline#extensions#ale#show_line_numbers = 1
-let airline#extensions#ale#open_lnum_symbol = ' L'
-let airline#extensions#ale#close_lnum_symbol = ''
 " ---------- ale ----------
 
 " Initialize plugin system
