@@ -39,11 +39,3 @@ Typing `:CocConfig` in vim to open coc configuration file.
 }
 ```
 
-## Zshrc
-
-Add the following to `.zshrc` : 
-
-```shell
-alias ubuntu="docker exec -it ubuntu /bin/zsh"
-```
-
