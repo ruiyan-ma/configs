@@ -11,7 +11,7 @@ RUN apt update && apt upgrade -y
 RUN apt install -y zsh git vim curl \ 
     && apt install -y build-essential gdb cgdb valgrind \ 
     && apt install -y python3 python3-pip \ 
-    && apt install -y ranger autojump trash-cli tree bat
+    && apt install -y ranger autojump trash-cli tree bat clangd
 
 # oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
