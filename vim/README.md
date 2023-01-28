@@ -18,7 +18,7 @@ The backup of ~/.ideavimrc
 # cocnvim
 
 ``` shell
-CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-html coc-xml coc-vimlsp coc-tsserver coc-sql coc-sh coc-pyright coc-pydocstring coc-json coc-java coc-css coc-clangd
+CocInstall coc-word coc-tabnine coc-snippets coc-marketplace coc-lightbulb coc-xml coc-vimlsp coc-sql coc-pyright coc-pydocstring coc-json coc-java coc-clangd
 ```
 
 ## CocConfig
