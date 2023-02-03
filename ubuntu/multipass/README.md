@@ -31,6 +31,7 @@ Install zsh.
 sudo apt install -y zsh git vim curl
 sudo apt install -y build-essential gdb cgdb valgrind clangd
 sudo apt install -y python3 python3-pip
+sudo apt install -y default-jdk
 sudo apt install -y ranger autojump trash-cli tree bat
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

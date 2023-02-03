@@ -11,6 +11,7 @@ RUN apt update && apt upgrade -y
 RUN apt install -y zsh git vim curl \ 
     && apt install -y build-essential gdb cgdb valgrind clangd \ 
     && apt install -y python3 python3-pip \ 
+    && apt install -y default-jdk \ 
     && apt install -y ranger autojump trash-cli tree bat
 
 # oh-my-zsh
