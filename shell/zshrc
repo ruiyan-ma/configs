@@ -114,29 +114,39 @@ source $ZSH/oh-my-zsh.sh
 # alias for python3
 alias python=python3
 alias pip=pip3
+
 # alias for ls
 alias ll="ls -l"
 alias la="ls -a"
+
 # ask before overwrite
 alias mv="mv -i"
+
 # create intermediate directories as required
 alias mkdir="mkdir -p"
+
 # set max display depth
 alias t2="tree -L 2"
 alias t3="tree -L 3"
+
 # use trash-cli to replace rm
 alias rm=trash
+
 # exit ranger but stay in the current directory
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
 # alias for docker container
 alias ubuntu="docker exec -it ubuntu /bin/zsh"
 
 # Export path for mysql
 export PATH=${PATH}:/usr/local/mysql/bin/
+
 # Export path for homebrew
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+
 # Export path for brew jdk
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+
 # Export vim as the default editor
 export EDITOR='vim'
 
