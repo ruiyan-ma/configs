@@ -7,34 +7,3 @@ docker build -t ubuntu:basic .
 docker run -itd -v /Users/ruiyan:/root/home --name ubuntu ubuntu:basic
 docker exec -it ubuntu /bin/zsh
 ```
-
-In ubuntu container, run the following:
-
-```
-# nodejs
-curl -sL install-node.vercel.app/lts | bash
-
-# formatter
-npm install -g js-beautify
-```
-
-## Cocnvim
-
-```shell
-CocInstall coc-word coc-snippets coc-marketplace coc-lightbulb coc-pyright coc-pydocstring coc-clangd
-```
-
-## CocConfig
-
-Add the following code to your coc configuration file:
-
-Typing `:CocConfig` in vim to open coc configuration file.
-
-```json
-{
-    "suggest.noselect": true,
-    "diagnostic.errorSign": "✗",
-    "diagnostic.warningSign": "",
-    "diagnostic.checkCurrentLine": true
-}
-```

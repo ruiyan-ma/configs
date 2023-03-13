@@ -108,20 +108,27 @@ source $ZSH/oh-my-zsh.sh
 # alias for python3
 alias python=python3
 alias pip=pip3
+
 # alias for ls
 alias ll="ls -l"
 alias la="ls -a"
+
 # ask before overwrite
 alias mv="mv -i"
+
 # create intermediate directories as required
 alias mkdir="mkdir -p"
+
 # set max display depth
 alias t2="tree -L 2"
 alias t3="tree -L 3"
+
 # use trash-cli to replace rm
 alias rm=trash
+
 # alias for bat
 alias bat=batcat
+
 # exit ranger but stay in the current directory
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 

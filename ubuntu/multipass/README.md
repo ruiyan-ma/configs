@@ -48,9 +48,6 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# nodejs
-sudo curl -sL install-node.vercel.app/lts | sudo bash
-
 # ranger
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
@@ -60,31 +57,4 @@ cp configs/ubuntu/zshrc ~/.zshrc
 cp configs/ubuntu/vimrc ~/.vimrc
 cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs
-
-# formatter
-sudo apt install -y astyle tidy
-sudo npm install -g js-beautify
-pip3 install --upgrade autopep8
-pip3 install sqlparse
-```
-
-## cocnvim
-
-```shell
-CocInstall coc-word coc-snippets coc-marketplace coc-lightbulb coc-pyright coc-pydocstring coc-clangd
-```
-
-## CocConfig
-
-Add the following code to your coc configuration file:
-
-Typing `:CocConfig` in vim to open coc configuration file.
-
-```json
-{
-    "suggest.noselect": true,
-    "diagnostic.errorSign": "✗",
-    "diagnostic.warningSign": "",
-    "diagnostic.checkCurrentLine": true
-}
 ```

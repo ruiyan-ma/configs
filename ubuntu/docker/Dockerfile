@@ -34,8 +34,3 @@ RUN git clone https://github.com/ruiyan-ma/configs.git \
     && cp configs/ubuntu/vimrc ~/.vimrc \
     && cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf \
     && rm -rf configs
-
-# formatter
-RUN apt install -y astyle tidy \ 
-    && pip3 install --upgrade autopep8 \
-    && pip3 install sqlparse
