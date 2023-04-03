@@ -3,8 +3,8 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible
 
-"basic
-set relativenumber
+" basic
+" set relativenumber
 set clipboard=unnamed
 set encoding=utf8
 set scrolloff=6
