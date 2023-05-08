@@ -31,3 +31,7 @@ brew install cloc
 
 # multipass ubuntu virtual machine
 brew install multipass
+
+# mongodb
+brew tap mongodb/brew
+brew install mongodb-community
