@@ -49,7 +49,7 @@ set nocompatible
 "basic
 syntax on
 set number
-set relativenumber
+"set relativenumber
 set mouse+=a
 set clipboard=unnamed
 set backspace=indent,eol,start
