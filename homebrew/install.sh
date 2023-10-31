@@ -8,7 +8,7 @@ brew tap homebrew/cask
 brew tap homebrew/cask-versions
 brew install git vim java python fd bat
 brew install autojump rg ranger tmux
-brew install shellcheck gh trash-cli node tree
+brew install gh trash-cli node tree
 
 # curl
 brew install curl
@@ -30,7 +30,7 @@ brew install maven gradle
 brew install cloc
 
 # multipass ubuntu virtual machine
-brew install multipass
+# brew install multipass
 
 # mongodb
 brew tap mongodb/brew

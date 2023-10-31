@@ -1,4 +1,4 @@
-# java formatter
+# C++ and java formatter
 brew install astyle
 
 # html
