@@ -32,12 +32,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
 Plug 'preservim/tagbar'
 nmap <F3> :TagbarToggle<CR>
 
-set rtp+=/opt/homebrew/opt/fzf
-Plug 'junegunn/fzf.vim'
-" use c-p to start fzf search
-nmap <C-p> :Files<CR>
-" use c-x to split and c-v to vsplit after fzf search
-
 " use \rg to start rg search
 nmap <leader>rg :Rg<CR>
 

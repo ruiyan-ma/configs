@@ -17,8 +17,8 @@ export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 
 # fzf
-brew install fzf
-/opt/homebrew/opt/fzf/install
+# brew install fzf
+# /opt/homebrew/opt/fzf/install
 
 # universal-ctags for vim tagbar plugin
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags

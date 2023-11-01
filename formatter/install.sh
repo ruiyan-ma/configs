@@ -2,10 +2,10 @@
 brew install astyle
 
 # html
-brew install tidy-html5
+# brew install tidy-html5
 
 # javascript
-npm install -g js-beautify
+# npm install -g js-beautify
 
 # python
 pip3 install --upgrade autopep8
