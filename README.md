@@ -9,7 +9,35 @@ git clone https://github.com/ruiyan-ma/configs.git ~/configs
 ## Homebrew
 
 ```shell
-sh ~/configs/homebrew/install.sh
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+brew update
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
+brew install git vim cmake java python autojump ranger
+brew install node tree gh bat tmux trash-cli rg fd cloc
+
+# curl
+brew install curl
+echo 'export PATH="/opt/homebrew/opt/curl/bin:$PATH"' >> ~/.zshrc
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
+
+# fzf
+# brew install fzf
+# /opt/homebrew/opt/fzf/install
+
+# universal-ctags for vim tagbar plugin
+brew install --HEAD universal-ctags/universal-ctags/universal-ctags
+
+# maven and gradle
+brew install maven gradle
+
+# mongodb
+brew tap mongodb/brew
+brew install mongodb-community
 ```
 
 ## Shell
@@ -37,15 +65,6 @@ git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git
 iTerm2-Color-Schemes => terminal => click on themes to open terminal
 
 Recommend: Dracula, OneHalfDark
-
-### Powerlevel10k
-
-Go to [Powerlevel10k](https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k) and install the recommend fonts. 
-
-```shell
-brew install powerlevel10k
-echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
-```
 
 ### Git
 
@@ -87,12 +106,18 @@ See `~/configs/vim/README.md` file.
 ```shell
 mkdir -p ~/.config/ranger/plugins
 cp ~/configs/ranger/rc.conf ~/.config/ranger
-cp ~/configs/ranger/autojump.py ~/.config/ranger/plugins
 git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 ```
 
 ## Formatters
 
 ```shell
-sh ~/configs/formatter/install.sh
+# C++ and java formatter
+brew install astyle
+
+# python
+pip3 install --upgrade autopep8
+
+# sql
+pip3 install sqlparse
 ```

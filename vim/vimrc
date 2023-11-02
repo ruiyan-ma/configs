@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-Plug Manager
+" Vim-Plug Manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -32,9 +32,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists(
 Plug 'preservim/tagbar'
 nmap <F3> :TagbarToggle<CR>
 
-" use \rg to start rg search
-nmap <leader>rg :Rg<CR>
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'honza/vim-snippets'
@@ -45,9 +42,7 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
 
 " color themes
-" let g:airline_theme='dark'
 let g:airline_theme='powerlineish'
-" let g:airline_theme='base16'
 " let g:airline_theme='minimalist'
 
 " tabline
@@ -65,7 +60,7 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Settings
+" General Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use vim mode
 set nocompatible
@@ -73,7 +68,6 @@ set nocompatible
 " basic
 syntax on
 set number
-" set relativenumber
 set mouse+=a
 set clipboard=unnamed
 set backspace=indent,eol,start
@@ -88,15 +82,15 @@ colorscheme onehalfdark
 
 " set color for completion popups
 " rider theme
-hi Pmenu ctermfg=251 ctermbg=237 guifg=#282c34 guibg=#dcdfe4
-hi PmenuSel ctermfg=231 ctermbg=25 guifg=#dcdfe4 guibg=#61afef
-hi PmenuSbar ctermbg=237 guibg=#474e5d
-hi PmenuThumb ctermbg=239 guibg=#dcdfe4
+" hi Pmenu ctermfg=251 ctermbg=237 guifg=#282c34 guibg=#dcdfe4
+" hi PmenuSel ctermfg=231 ctermbg=25 guifg=#dcdfe4 guibg=#61afef
+" hi PmenuSbar ctermbg=237 guibg=#474e5d
+" hi PmenuThumb ctermbg=239 guibg=#dcdfe4
 " sharp theme
-" hi Pmenu ctermfg=255 ctermbg=237 guifg=#282c34 guibg=#dcdfe4
-" hi PmenuSel ctermfg=235 ctermbg=255 guifg=#dcdfe4 guibg=#61afef
-" hi PmenuSbar ctermbg=245 guibg=#474e5d
-" hi PmenuThumb ctermbg=255 guibg=#dcdfe4
+hi Pmenu ctermfg=255 ctermbg=237 guifg=#282c34 guibg=#dcdfe4
+hi PmenuSel ctermfg=235 ctermbg=255 guifg=#dcdfe4 guibg=#61afef
+hi PmenuSbar ctermbg=245 guibg=#474e5d
+hi PmenuThumb ctermbg=255 guibg=#dcdfe4
 
 " Cursor settings:
 "  1 -> blinking block
@@ -135,7 +129,7 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Coc.nvim Settings
+" Coc.nvim Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Some servers have issues with backup files, see #649
 set nobackup

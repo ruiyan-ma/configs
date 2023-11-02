@@ -1,5 +1,5 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-Plug Manager
+" Vim-Plug Manager
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin()
 " The default plugin directory will be as follows:
@@ -22,8 +22,6 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_powerline_fonts = 1
 
 " color themes
-" let g:airline_theme='dark'
-" let g:airline_theme='base16'
 let g:airline_theme='minimalist'
 
 " tabline
@@ -41,7 +39,7 @@ call plug#end()
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => General Settings
+" General Settings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " use vim mode
 set nocompatible
@@ -49,7 +47,6 @@ set nocompatible
 "basic
 syntax on
 set number
-"set relativenumber
 set mouse+=a
 set clipboard=unnamed
 set backspace=indent,eol,start
