@@ -17,7 +17,7 @@ brew update
 brew tap homebrew/cask
 brew tap homebrew/cask-versions
 brew install git vim cmake java python autojump ranger
-brew install node tree gh bat tmux trash-cli rg fd cloc
+brew install node tree gh bat tmux trash-cli rg fd tldr cloc
 
 # curl
 brew install curl
