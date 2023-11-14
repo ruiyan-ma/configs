@@ -8,11 +8,22 @@ RUN apt clean
 RUN apt update && apt upgrade -y
 
 # apt install
-RUN apt install -y zsh git vim curl \ 
+RUN apt install -y zsh git vim curl wget \ 
     && apt install -y build-essential gdb cgdb valgrind clangd \ 
     && apt install -y python3 python3-pip \ 
-    && apt install -y default-jdk \ 
-    && apt install -y ranger autojump trash-cli tree bat
+    && apt install -y ranger autojump tree bat \
+    && apt install -y zip unzip tar
+
+# install cmake
+RUN apt install -y build-essential libssl-dev \
+    && wget http://www.cmake.org/files/v3.27/cmake-3.27.7.tar.gz \ 
+    && tar xf cmake-3.27.7.tar.gz \ 
+    && cd cmake-3.27.7 \ 
+    && ./configure \ 
+    && make \
+    && make install \
+    && cd .. \
+    && rm -rf cmake-3.27.7 cmake-3.27.7.tar.gz
 
 # oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
