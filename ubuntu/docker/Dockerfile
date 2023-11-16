@@ -15,15 +15,15 @@ RUN apt install -y zsh git vim curl wget \
     && apt install -y zip unzip tar
 
 # install cmake
-RUN apt install -y build-essential libssl-dev \
-    && wget http://www.cmake.org/files/v3.27/cmake-3.27.7.tar.gz \ 
-    && tar xf cmake-3.27.7.tar.gz \ 
-    && cd cmake-3.27.7 \ 
-    && ./configure \ 
-    && make \
-    && make install \
-    && cd .. \
-    && rm -rf cmake-3.27.7 cmake-3.27.7.tar.gz
+# RUN apt install -y build-essential libssl-dev \
+#     && wget http://www.cmake.org/files/v3.27/cmake-3.27.7.tar.gz \ 
+#     && tar xf cmake-3.27.7.tar.gz \ 
+#     && cd cmake-3.27.7 \ 
+#     && ./configure \ 
+#     && make \
+#     && make install \
+#     && cd .. \
+#     && rm -rf cmake-3.27.7 cmake-3.27.7.tar.gz
 
 # oh-my-zsh
 RUN sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
