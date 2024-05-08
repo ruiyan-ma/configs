@@ -28,22 +28,15 @@ multipass shell
 Install zsh. 
 
 ```shell
-sudo apt install -y zsh git vim curl
+sudo apt install -y git vim curl
 sudo apt install -y build-essential gdb cgdb valgrind clangd
 sudo apt install -y python3 python3-pip
-sudo apt install -y default-jdk
-sudo apt install -y ranger autojump trash-cli tree bat
-
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+sudo apt install -y ranger tree
 ```
 
 Install other things. 
 
 ```shell
-# shell
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-
 # vim
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -53,8 +46,28 @@ git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger
 
 # copy files
 git clone https://github.com/ruiyan-ma/configs.git
-cp configs/ubuntu/zshrc ~/.zshrc
 cp configs/ubuntu/vimrc ~/.vimrc
 cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf
 rm -rf configs
 ```
+
+Copy the following to .bashrc
+
+```shell
+# ask before overwrite
+alias mv="mv -i"
+
+# create intermediate directories as required
+alias mkdir="mkdir -p"
+
+# set max display depth
+alias t2="tree -L 2"
+alias t3="tree -L 3"
+
+# exit ranger but stay in the current directory
+alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
+
+# Export vim as the default editor
+export EDITOR='vim'
+```
+
