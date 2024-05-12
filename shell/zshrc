@@ -139,5 +139,3 @@ export EDITOR='vim'
 
 # Use vim mode in the shell
 bindkey -v
-
-source /Users/ruiyan/.config/broot/launcher/bash/br
