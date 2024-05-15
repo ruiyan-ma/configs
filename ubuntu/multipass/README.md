@@ -28,8 +28,8 @@ multipass shell
 Install zsh. 
 
 ```shell
-sudo apt install -y git vim curl
-sudo apt install -y build-essential gdb cgdb valgrind clangd
+sudo apt install -y git vim curl wget make
+sudo apt install -y build-essential g++ gdb cgdb valgrind clangd
 sudo apt install -y python3 python3-pip
 sudo apt install -y ranger tree
 ```
