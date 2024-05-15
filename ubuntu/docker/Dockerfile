@@ -41,8 +41,8 @@ RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 RUN git clone https://github.com/alexanderjeurissen/ranger_devicons ~/.config/ranger/plugins/ranger_devicons
 
 # copy config files
-RUN git clone https://github.com/ruiyan-ma/configs.git \
-    && cp configs/ubuntu/zshrc ~/.zshrc \
-    && cp configs/ubuntu/vimrc ~/.vimrc \
-    && cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf \
-    && rm -rf configs
+RUN git clone https://github.com/ruiyan-ma/configs.git
+RUN cp configs/ubuntu/zshrc ~/.zshrc
+RUN cp configs/ubuntu/vimrc ~/.vimrc
+RUN cp configs/ubuntu/rc.conf ~/.config/ranger/rc.conf
+RUN rm -rf configs
