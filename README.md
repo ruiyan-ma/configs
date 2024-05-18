@@ -14,7 +14,7 @@ echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 brew update
-brew install git vim cmake java python autojump ranger
+brew install git vim make cmake java python autojump ranger
 brew install node tree gh bat tmux trash-cli rg fd tldr cloc
 
 # curl
