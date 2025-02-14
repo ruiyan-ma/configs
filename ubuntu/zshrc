@@ -105,19 +105,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias python=python3
-alias pip=pip3
-
-# ask before overwrite
-alias mv="mv -i"
-
-# create intermediate directories as required
-alias mkdir="mkdir -p"
-
-# set max display depth
-alias t2="tree -L 2"
-alias t3="tree -L 3"
-
 # exit ranger but stay in the current directory
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 

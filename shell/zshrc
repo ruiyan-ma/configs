@@ -106,27 +106,11 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-alias python=python3
-alias pip=pip3
-
-# ask before overwrite
-alias mv="mv -i"
-
-# create intermediate directories as required
-alias mkdir="mkdir -p"
-
-# set max display depth
-alias t2="tree -L 2"
-alias t3="tree -L 3"
-
 # exit ranger but stay in the current directory
 alias ranger='ranger --choosedir=$HOME/.rangerdir; LASTDIR=`cat $HOME/.rangerdir`; cd "$LASTDIR"'
 
 # alias for docker container
 alias ubuntu="docker exec -it ubuntu /bin/zsh"
-
-# Export path for mysql
-export PATH=${PATH}:/usr/local/mysql/bin/
 
 # Export path for brew curl
 export PATH="/opt/homebrew/opt/curl/bin:$PATH"
@@ -139,3 +123,9 @@ export EDITOR='vim'
 
 # Use vim mode in the shell
 bindkey -v
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/ruiyanma/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions

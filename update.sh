@@ -1,6 +1,5 @@
 # update vim
 cp ~/.vimrc vim/vimrc
-cp ~/.ideavimrc vim/ideavimrc
 
 # update zsh
 cp ~/.zshrc shell/zshrc

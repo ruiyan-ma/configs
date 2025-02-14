@@ -29,16 +29,11 @@ export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 
 # universal-ctags for vim tagbar plugin
 brew install --HEAD universal-ctags/universal-ctags/universal-ctags
-
-# maven and gradle
-brew install maven gradle
-
-# mongodb
-brew tap mongodb/brew
-brew install mongodb-community
 ```
 
 ## Shell
+
+First download [Meslo Nerd Font](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k) and set terminal font to MesloLGS NF Regular 13. 
 
 ### Oh-my-zsh
 
@@ -92,7 +87,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 
 ```shell
 cp ~/configs/vim/vimrc ~/.vimrc
-cp ~/configs/vim/ideavimrc ~/.ideavimrc
 ```
 
 ### coc-nvim
